@@ -11,16 +11,17 @@ pin = 9
 # Initialize Arduino board and servo
 board = Arduino(port)
 board.digital[pin].mode = SERVO
+print("Board connected")
+
 
 # Load known images and create a dictionary of face encodings
 known_encodings = {}
 known_encodings["Suman"] = face_recognition.face_encodings(face_recognition.load_image_file("suman.jpg"))[0]
 known_encodings["Ajaypal"] = face_recognition.face_encodings(face_recognition.load_image_file("ajaypal.jpeg"))[0]
 
-# Add more persons as needed
-
 # Initialize video capture
 video = cv2.VideoCapture(0)
+
 
 while video.isOpened():
     ret, frame = video.read()
