@@ -103,6 +103,7 @@ import face_recognition
 import serial
 import time
 
+
 # Load known images and create a dictionary of face encodings
 known_encodings = {}
 known_encodings["Suman"] = face_recognition.face_encodings(face_recognition.load_image_file("suman.jpg"))[0]
