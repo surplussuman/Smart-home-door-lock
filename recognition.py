@@ -8,6 +8,7 @@ port = 'COM5'
 pin = 9
 
 
+
 # Initialize Arduino board and servo
 board = Arduino(port)
 board.digital[pin].mode = SERVO
